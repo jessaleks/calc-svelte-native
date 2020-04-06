@@ -1,0 +1,1 @@
+<label  class="AppCalcDisplay" text="50" row="0" column="0" colSpan="5"></label>

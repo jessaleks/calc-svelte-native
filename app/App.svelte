@@ -1,26 +1,23 @@
-<page>
-    <actionBar title="Svelte Native App" />
-    <gridLayout>
-        <label class="info" horizontalAlignment="center" verticalAlignment="center" textWrap="true">
-            <formattedString>
-                <span class="fas" text="&#xf135;" />
-                <span text=" {message}" />
-            </formattedString>
-        </label>
-        <button></button>
+<page actionBarHidden="true">
+    
+    <gridLayout margin="0" columns="*, *, *, *" rows="*, 100, 100, 100, 100, 100" width="100%">
+        <AppCalcDisplay></AppCalcDisplay>
+        <AppButtonRow chars={["AC", "C", "%", "/"]} row="1"></AppButtonRow>
+        <AppButtonRow chars={["9", "8", "7", "X"]} row="2"></AppButtonRow>
+        <AppButtonRow chars={["6", "5", "4", "+"]} row="3"></AppButtonRow>
+        <AppButtonRow chars={["3", "2", "1", "-"]} row="4"></AppButtonRow>
+        <AppButtonRow chars={["+/-", "0", ".", "="]} row="5"></AppButtonRow>
+        
     </gridLayout>
 </page>
 
 <script>
-    import Button from './Button.svelte'; 
-    let message = "Blank Svelte Native App"
+    import AppCalcDisplay from './AppCalcDisplay.svelte';
+    import AppButton from './AppButton.svelte';
+    import AppButtonRow from './AppButtonRow.svelte';
+    export let calculation = [];
+    function evaluateCalculation(value){
+        return eval(value);
+    }
 </script>
 
-<style>
-    .info .fas {
-        color: #3A53FF;
-    }
-    .info {
-        font-size: 20;
-    }
-</style>
