@@ -1,5 +1,6 @@
-<label class="AppCalcDisplay" text="100" row="0" column="0" colSpan="5">{calc}</label>
+<label class="AppCalcDisplay" bind:text={calc} row="0" column="0" colSpan="5"/>
 
 <script>
-export let calc = 0;
-</script>
+console.log("updated")
+export let calc;
+</script>  

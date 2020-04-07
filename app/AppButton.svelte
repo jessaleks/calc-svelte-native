@@ -17,21 +17,28 @@
 
 function handleInput(text) {
     //if ($result != 0)
-    console.log(calcArray);
-    const specialKeys = ["AC", "C", "="]
+    
+    const operatorKeys = ["+", "-", "/", "*", "%"]
+    if (text == $calculation[$calculation-1]) {
+        return;
+    } 
+    
+    const specialKeys = ["AC", "C", "="]  
+    // checking whether to do something else than just adding an element to an array
     if (text == "AC") {
         $calculation = [];
     }
     else if (text == "C") {
-        calcArray.pop();
-        $calculation = calcArray;
+        $calculation.pop()
     }
     else if (text == "=") {
-        $result = eval($calculation);
+        $result = eval($calculation.join(""));
     }
     else {
         $calculation.push(text);
     }
+    console.log($calculation);
+    console.log($result);
 };
 
 
