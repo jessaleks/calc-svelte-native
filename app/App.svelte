@@ -1,7 +1,7 @@
 <page actionBarHidden="true">
     
     <gridLayout margin="0" columns="*, *, *, *" rows="*, 100, 100, 100, 100, 100" width="100%">
-        <AppCalcDisplay calc={$calculation}></AppCalcDisplay>
+        <AppCalcDisplay calc={$calculation.join("")}></AppCalcDisplay>
         <AppButtonRow chars={["AC", "C", "%", "/"]} row="1"></AppButtonRow>
         <AppButtonRow chars={["9", "8", "7", "X"]} row="2"></AppButtonRow>
         <AppButtonRow chars={["6", "5", "4", "+"]} row="3"></AppButtonRow>

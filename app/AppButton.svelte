@@ -16,18 +16,21 @@
 
 
 function handleInput(text) {
+    //if ($result != 0)
+    console.log(calcArray);
     const specialKeys = ["AC", "C", "="]
     if (text == "AC") {
-        console.log("AC");
+        $calculation = [];
     }
     else if (text == "C") {
-        console.log("C");
+        calcArray.pop();
+        $calculation = calcArray;
     }
     else if (text == "=") {
         $result = eval($calculation);
     }
     else {
-        $calculation += label;
+        $calculation.push(text);
     }
 };
 
