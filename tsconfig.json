@@ -1,27 +1,25 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "noEmitHelpers": true,
-        "noEmitOnError": true,
-        "skipLibCheck": true,
-        "lib": [
-            "es6"
-        ],
-        "types": [
-            "./node_modules/svelte/"
-        ],
-        "baseUrl": ".",
-        "paths": {
-            "~/*": [
-                "app/*"
-            ]
-        }
-    },
-    "exclude": [
-        "node_modules",
-        "platforms"
-    ]
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "ES2017",
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "lib": ["dom", "es2017"],
+    "types": ["node"],
+    "typeRoots": ["types"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["app/*"],
+      "@/*": ["app/*"]
+    }
+  },
+  "exclude": ["node_modules", "platforms"]
 }
